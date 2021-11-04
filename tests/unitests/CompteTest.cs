@@ -11,7 +11,14 @@ namespace banque_simple
         [SetUp]
         public void SetUp()
         {
+            // Initialisation des données avant chaque test
             compte = new Compte(123456789, 10000, "rdupont@gmail.com");
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            // Supression du jeu de données après chaque test
         }
 
         [Test]
